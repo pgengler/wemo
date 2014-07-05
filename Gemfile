@@ -1,8 +1,9 @@
-source "http://rubygems.org"
-gem "upnp", git: "https://github.com/turboladen/upnp.git"
+source "https://rubygems.org"
+
+gem "playful", "0.1.0.alpha.1"
 gem "sinatra"
 gem "shotgun"
-gem "active_support"
+gem "activesupport"
 gem "i18n"
 gem "pry"
 gem "awesome_print"

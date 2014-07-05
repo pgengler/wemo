@@ -1,2 +1,7 @@
-require File.dirname(__FILE__) + "/app.rb"
-run Wemo::Application
+require 'rubygems'
+require 'sinatra'
+require './app'
+
+set :environment, :development
+
+run Sinatra::Application
