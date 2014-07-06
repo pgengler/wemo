@@ -16,6 +16,8 @@ $ bundle install
 $ rackup
 ```
 
+Then visit [localhost:9292](http://localhost:9292) in your browser.
+
 ### The API
 
 The main thing you'll work with is a `Wemo::Switch` object. A `Switch`
