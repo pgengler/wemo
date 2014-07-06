@@ -5,7 +5,7 @@ Simple dashboard of networked WeMo Switches.
 ### Install
 
 ```
-$ git clone https://github.com/mnoble/wemo.git
+$ git clone https://github.com/pgengler/wemo.git
 $ cd wemo
 $ bundle install
 ```
@@ -39,7 +39,7 @@ can discover them using `Wemo::Radar`. A `Radar` is initialized with the
 device type you want to find.
 
 ```ruby
-radar = Wemo::Radar.new("urn:Belkin:device:controllee:1")
+radar = Wemo::Radar.new("urn:Belkin:service:basicevent:1")
 radar.scan # => [#<Wemo::Switch:0x007f8>, #<Wemo::Switch:0x007f9>]
 ```
 
