@@ -23,6 +23,11 @@ get "/" do
 	erb :index
 end
 
+post "/" do
+	$device_list.scan_for_devices
+	redirect to('/')
+end
+
 post "/wemos/:uuid/:state" do
 	wemo = Wemo::Switch.find(params[:uuid])
 	wemo.set! params[:state]
