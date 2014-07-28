@@ -3,6 +3,22 @@ require "active_support/all"
 require 'playful/ssdp'
 require_relative "lib/wemo"
 
+class DeviceList
+	def initialize
+		scan_for_devices
+	end
+
+	def devices
+		@wemos
+	end
+
+	def scan_for_devices
+		@wemos = Wemo::Radar.new('urn:Belkin:service:basicevent:1').scan
+	end
+end
+
+$device_list = DeviceList.new
+
 get "/" do
 	erb :index
 end
@@ -15,6 +31,6 @@ end
 
 helpers do
 	def wemos
-		Wemo::Radar.new('urn:Belkin:service:basicevent:1').scan
+		$device_list.devices
 	end
 end
