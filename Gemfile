@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "playful", "0.1.0.alpha.1"
+gem "frisky"
 gem "sinatra"
 gem "shotgun"
 gem "activesupport"

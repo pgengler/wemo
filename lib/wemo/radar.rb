@@ -11,7 +11,7 @@ module Wemo
     end
 
     def locations
-      Playful::SSDP.search(device_type).uniq.map { |attrs| without_path(attrs[:location]) }
+      Frisky::SSDP.search(device_type).uniq.map { |attrs| without_path(attrs[:location]) }
     end
 
     def without_path(uri)
